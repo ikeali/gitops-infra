@@ -1,0 +1,24 @@
+replicaCount: 2
+
+image:
+  repository: ghcr.io/ikeali/api-gateway
+  tag: "c26acf0902292f8a3188ca315ddb0b5d4396edf2"
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 80
+
+containerPort: 80
+
+tolerations:
+  - operator: Exists
+
+env:
+  USER_SERVICE_URL: "http://user-service:8002"
+  # AUTH_SERVICE_URL: "http://auth-service:8001"
+  # PRODUCT_SERVICE_URL: "http://product-service:8003"
+
+secrets:
+  jwtSecretName: jwt-secret
