@@ -11,7 +11,7 @@ service:
   port: 5432
 
 postgres:
-  db: product_db
+  db: authentication_db
   user: postgres
   password: Ikeali123%
 
