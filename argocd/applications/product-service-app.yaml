@@ -11,8 +11,8 @@ spec:
   source:
     repoURL: https://github.com/PlainMarket/product-service.git
     targetRevision: feature/devops
+    path: environments/dev
 
-    path: helm/product-service
 
   destination:
     server: https://kubernetes.default.svc

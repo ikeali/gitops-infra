@@ -11,7 +11,8 @@ spec:
   source:
     repoURL: https://github.com/PlainMarket/product-service.git
     targetRevision: feature/devops
-    path: helm/product-postgres
+    path: environments/dev
+
 
   destination:
     server: https://kubernetes.default.svc

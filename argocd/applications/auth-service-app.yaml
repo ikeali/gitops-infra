@@ -11,7 +11,8 @@ spec:
   source:
     repoURL: https://github.com/PlainMarket/auth-service.git
     targetRevision: feature/devops
-    path: helm/auth-service
+    path: environments/dev
+
 
   destination:
     server: https://kubernetes.default.svc
