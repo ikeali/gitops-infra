@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/PlainMarket/gitops-infra.git
     targetRevision: main
-    path: product-service/helm
+    path: helm/product-service
     helm:
       releaseName: product-service
       valueFiles:

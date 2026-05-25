@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/PlainMarket/gitops-infra.git
     targetRevision: main
-    path: product-postgres/helm
+    path: helm/product-postgres
     helm:
       releaseName: product-postgres
       valueFiles:

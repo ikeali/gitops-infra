@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ghcr.io/ikeali/api-gateway
-  tag: "90a731083ee59e00c17c03885b35c7e4545ec097"
+  tag: "c26acf0902292f8a3188ca315ddb0b5d4396edf2"
   pullPolicy: Always
 
 service:
