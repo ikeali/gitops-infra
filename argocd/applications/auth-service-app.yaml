@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/PlainMarket/gitops-infra.git
     targetRevision: main
-    path: helm/auth-service
+    path: auth-service/helm
     helm:
       releaseName: auth-service
       valueFiles:
