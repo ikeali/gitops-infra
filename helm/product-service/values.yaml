@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ghcr.io/plainmarket/product-service 
-  tag: "4e630a745efa02a8fc8e8deaac36caa394ae491a"
+  tag: "81247d57394d9494e96df9c2b990803c60554da3"
   pullPolicy: Always
 
 service:

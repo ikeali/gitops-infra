@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ghcr.io/plainmarket/auth-service
-  tag: "0a7313d9c022dc054b0186d11486d99703e2f2f6"
+  tag: "b9ec41b0f7c0071f3f70d8dd14a4fdb697af3731"
   pullPolicy: Always
 
 service:
