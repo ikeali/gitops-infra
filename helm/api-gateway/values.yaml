@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ghcr.io/plainmarket/api-gateway
-  tag: "5c5f3d6977a622ab19dec49ba7888ad3387d5556"
+  tag: "76981f332b15ab49fb849f24fc79f3f49f86a9c1"
   pullPolicy: Always
 
 service:
