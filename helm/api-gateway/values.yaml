@@ -1,8 +1,8 @@
 replicaCount: 2
 
 image:
-  repository: ghcr.io/plainmarket/api-gateway
-  tag: "4122da6de2eb8ae780d794b549b6fd0f4cbc550f"
+  repository: ghcr.io/ikeali/api-gateway
+  tag: "ef219662123e5fdfe55768bff62e3652d099838c
   pullPolicy: Always
 
 service:
