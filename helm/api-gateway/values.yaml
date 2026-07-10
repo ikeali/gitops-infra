@@ -16,9 +16,12 @@ tolerations:
   - operator: Exists
 
 env:
-  USER_SERVICE_URL: "http://user-service:8002"
-  # AUTH_SERVICE_URL: "http://auth-service:8001"
-  # PRODUCT_SERVICE_URL: "http://product-service:8003"
+  USER_SERVICE_URL: "http://user-service:8000"
+  AUTH_SERVICE_URL: "http://auth-service:8000"
+  PRODUCT_SERVICE_URL: "http://product-service:8003"
+  ORDER_SERVICE_URL: "http://order-service:8000"
+  CART_SERVICE_URL: "http://cart-service:8000"
+  PAYMENT_SERVICE_URL: "http://payment-service:8000"
 
 secrets:
   jwtSecretName: jwt-secret
