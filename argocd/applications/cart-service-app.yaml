@@ -1,18 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: product-service
+  name: cart-service
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/ikeali/gitops-infra.git
-    targetRevision: main
-    path: helm/product-service
-    helm:
-      releaseName: product-service
-      valueFiles:
-        - values.yaml
+    targetRevision: HEAD
+    path: helm/cart-service
   destination:
     server: https://kubernetes.default.svc
     namespace: default
@@ -20,5 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true

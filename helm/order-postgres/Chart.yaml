@@ -1,0 +1,6 @@
+apiVersion: v2
+name: order-postgres
+description: PostgreSQL database for order-service
+type: application
+version: 0.1.0
+appVersion: "15"

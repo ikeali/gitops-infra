@@ -1,0 +1,26 @@
+replicaCount: 2
+
+image:
+  repository: ghcr.io/plainmarket/payment-service
+  tag: "latest"
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8000
+
+containerPort: 8000
+
+tolerations:
+  - operator: Exists
+
+env: {}
+
+database:
+  host: payment-postgres
+  port: "5432"
+
+secrets:
+  jwtSecretName: jwt-secret
+  paymentDbSecretName: payment-db-secret

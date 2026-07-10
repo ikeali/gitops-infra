@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/PlainMarket/gitops-infra.git
+    repoURL: https://github.com/ikeali/gitops-infra.git
     targetRevision: main
     path: helm/auth-postgres
     helm:
