@@ -1,8 +1,8 @@
 replicaCount: 2
 
 image:
-  repository: ghcr.io/plainmarket/cart-service
-  tag: "latest"
+  repository: ghcr.io/ikeali/cart-service
+  tag: "ef219662123e5fdfe55768bff62e3652d099838c"
   pullPolicy: Always
 
 service:

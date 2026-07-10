@@ -1,8 +1,8 @@
 replicaCount: 2
 
 image:
-  repository: ghcr.io/plainmarket/order-service
-  tag: "latest"
+  repository: ghcr.io/ikeali/order-service
+  tag: "ef219662123e5fdfe55768bff62e3652d099838c"
   pullPolicy: Always
 
 service:
