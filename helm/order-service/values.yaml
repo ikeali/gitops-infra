@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ghcr.io/ikeali/order-service
-  tag: "ef219662123e5fdfe55768bff62e3652d099838c"
+  tag: "46ae03b26c7c5700c7e56ba78fc72735c514716f"
   pullPolicy: Always
 
 service:
