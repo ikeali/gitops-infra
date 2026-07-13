@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ghcr.io/ikeali/cart-service
-  tag: "ed86eaca32a2cf6b8e732171cc89a33b8cb5d208"
+  tag: "9a5f3e5f82f364d5f55e71e11d6e4447b15f4df7"
   pullPolicy: Always
 
 service:
