@@ -17,9 +17,6 @@ spec:
         app: payment-service
 
     spec:
-      imagePullSecrets:
-        - name: ghcr-secret
-
       tolerations:
 {{ toYaml .Values.tolerations | indent 8 }}
 
@@ -34,6 +31,10 @@ spec:
             - containerPort: {{ .Values.containerPort }}
 
           env:
+
+            - name: USER_SERVICE_URL
+              value: "{{ .Values.env.USER_SERVICE_URL }}"
+
             - name: DB_HOST
               value: "{{ .Values.database.host }}"
 
