@@ -1,3 +1,36 @@
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: monitoring
+#   namespace: argocd
+# spec:
+#   project: default
+#   source:
+#     repoURL: https://prometheus-community.github.io/helm-charts
+#     chart: kube-prometheus-stack
+#     targetRevision: 65.5.1   # confirm actual version
+#     helm:
+#       releaseName: monitoring
+#       values: |
+#         grafana:
+#           admin:
+#             existingSecret: grafana-admin-secret
+#             userKey: admin-user
+#             passwordKey: admin-password
+#         prometheus:
+#           prometheusSpec:
+#             retention: 7d
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: monitoring
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=true
+
+
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -8,7 +41,7 @@ spec:
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
     chart: kube-prometheus-stack
-    targetRevision: 65.5.1   # confirm actual version
+    targetRevision: 65.5.1
     helm:
       releaseName: monitoring
       values: |
@@ -29,3 +62,14 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+  ignoreDifferences:
+    - group: batch
+      kind: Job
+      name: monitoring-kube-prometheus-admission-create
+      jsonPointers:
+        - /status
+    - group: batch
+      kind: Job
+      name: monitoring-kube-prometheus-admission-patch
+      jsonPointers:
+        - /status
