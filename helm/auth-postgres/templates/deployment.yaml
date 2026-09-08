@@ -32,19 +32,22 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.secrets.name }}
-                  key: POSTGRES_DB
+                  # key: POSTGRES_DB
+                  key: DB_NAME
 
             - name: POSTGRES_USER
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.secrets.name }}
-                  key: POSTGRES_USER
+                  # key: POSTGRES_USER
+                  key: DB_USER
 
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.secrets.name }}
-                  key: POSTGRES_PASSWORD
+                  # key: POSTGRES_PASSWORD
+                  key: DB_PASSWORD
 
           volumeMounts:
             - name: postgres-storage
