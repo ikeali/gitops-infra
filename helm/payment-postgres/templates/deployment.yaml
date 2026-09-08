@@ -45,6 +45,10 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.secrets.name }}
                   key: DB_PASSWORD
+            
+            - name: PGDATA 
+              value: /var/lib/postgresql/data/pgdata
+
 
           volumeMounts:
             - name: postgres-storage
