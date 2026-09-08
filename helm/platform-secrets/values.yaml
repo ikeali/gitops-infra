@@ -1,5 +1,6 @@
 vault:
-  server: https://vault.edusuc.net
+  # server: https://vault.edusuc.net
+  server: https://vault-playground.edusuc.net
   path: Dev-secret
   auth:
     userPass:
