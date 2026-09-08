@@ -15,7 +15,7 @@ spec:
         - values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: s12ike
   syncPolicy:
     automated:
       prune: true

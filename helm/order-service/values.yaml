@@ -22,5 +22,5 @@ database:
   port: "5432"
 
 secrets:
-  jwtSecretName: jwt-secret
-  orderDbSecretName: order-db-secret
+  name: order-service-secrets
+  remoteKey: s12ike.wft/E-COMMERCE/order-service

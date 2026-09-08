@@ -22,5 +22,5 @@ database:
   port: "5432"
 
 secrets:
-  jwtSecretName: jwt-secret
-  cartDbSecretName: cart-db-secret
+  name: cart-service-secrets
+  remoteKey: s12ike.wft/E-COMMERCE/cart-service

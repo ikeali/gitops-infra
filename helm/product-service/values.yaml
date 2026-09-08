@@ -23,5 +23,5 @@ database:
   port: "5432"
 
 secrets:
-  jwtSecretName: jwt-secret
-  productDbSecretName: product-db-secret
+  name: product-service-secrets
+  remoteKey: s12ike.wft/E-COMMERCE/product-service

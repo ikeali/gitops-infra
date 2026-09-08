@@ -340,7 +340,9 @@ service:
 postgres:
   db: product_db
   user: postgres
-  password: Ikeali123%
+
+secrets:
+  name: product-service-secrets
 
 persistence:
   enabled: true

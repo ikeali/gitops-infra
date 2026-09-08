@@ -17,6 +17,9 @@ spec:
         app: api-gateway
 
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+
       tolerations:
 {{ toYaml .Values.tolerations | indent 8 }}
 
@@ -31,29 +34,17 @@ spec:
             - containerPort: {{ .Values.containerPort }}
 
           env:
-
             - name: USER_SERVICE_URL
               value: "{{ .Values.env.USER_SERVICE_URL }}"
 
             - name: AUTH_SERVICE_URL
               value: "{{ .Values.env.AUTH_SERVICE_URL }}"
-              
+
             - name: PRODUCT_SERVICE_URL
               value: "{{ .Values.env.PRODUCT_SERVICE_URL }}"
-
-            - name: ORDER_SERVICE_URL
-              value: "{{ .Values.env.ORDER_SERVICE_URL }}"
-
-            - name: CART_SERVICE_URL
-              value: "{{ .Values.env.CART_SERVICE_URL }}"
-            
-            - name: PAYMENT_SERVICE_URL
-              value: "{{ .Values.env.PAYMENT_SERVICE_URL }}"
 
             - name: JWT_SIGNING_KEY
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.secrets.jwtSecretName }}
+                  name: {{ .Values.secrets.name }}
                   key: JWT_SIGNING_KEY
-
-            

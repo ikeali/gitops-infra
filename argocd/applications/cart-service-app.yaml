@@ -7,12 +7,18 @@ spec:
   project: default
   source:
     repoURL: https://github.com/ikeali/gitops-infra.git
-    targetRevision: HEAD
+    targetRevision: main
     path: helm/cart-service
+    helm:
+      releaseName: cart-service
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: s12ike
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

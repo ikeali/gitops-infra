@@ -10,9 +10,11 @@ service:
   port: 5432
 
 postgres:
-  db: authentication_db
+  db: auth_db
   user: postgres
-  password: Ikeali123%
+
+secrets:
+  name: auth-service-secrets
 
 persistence:
   enabled: true

@@ -15,3 +15,6 @@ persistence:
   accessMode: ReadWriteOnce
 
 resources: {}
+
+secrets:
+  name: order-service-secrets

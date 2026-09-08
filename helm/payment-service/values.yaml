@@ -22,5 +22,5 @@ database:
   port: "5432"
 
 secrets:
-  jwtSecretName: jwt-secret
-  paymentDbSecretName: payment-db-secret
+  name: payment-service-secrets
+  remoteKey: s12ike.wft/E-COMMERCE/payment-service

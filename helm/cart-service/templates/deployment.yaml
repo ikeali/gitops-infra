@@ -111,23 +111,23 @@ spec:
             - name: JWT_SIGNING_KEY
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.secrets.jwtSecretName }}
+                  name: {{ .Values.secrets.name }}
                   key: JWT_SIGNING_KEY
 
             - name: DB_NAME
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.secrets.cartDbSecretName }}
+                  name: {{ .Values.secrets.name }}
                   key: POSTGRES_DB
 
             - name: DB_USER
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.secrets.cartDbSecretName }}
+                  name: {{ .Values.secrets.name }}
                   key: POSTGRES_USER
 
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.secrets.cartDbSecretName }}
+                  name: {{ .Values.secrets.name }}
                   key: POSTGRES_PASSWORD

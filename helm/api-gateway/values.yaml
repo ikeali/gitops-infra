@@ -24,4 +24,5 @@ env:
   PAYMENT_SERVICE_URL: "http://payment-service:8000"
 
 secrets:
-  jwtSecretName: jwt-secret
+  name: api-gateway-secrets
+  remoteKey: s12ike.wft/E-COMMERCE/api-gateway

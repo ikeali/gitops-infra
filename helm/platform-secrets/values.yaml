@@ -1,0 +1,9 @@
+vault:
+  server: https://vault.edusuc.net
+  path: Dev-secret
+  auth:
+    userPass:
+      path: userpass
+      username: s12ike.wft
+      credentialsSecretName: vault-auth
+      credentialsSecretKey: password
