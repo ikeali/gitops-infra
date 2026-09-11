@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: ghcr.io/plainmarket/frontend
+  repository: ghcr.io/ikeali/user-frontend
   tag: "abf26a5ca15c7db92ca50b4443a09210141f9113"
   pullPolicy: IfNotPresent
 
@@ -10,9 +10,19 @@ service:
   port: 80
   targetPort: 80
 
+
+env:
+  REACT_APP_API_URL: "http://127.0.0.1:3000"
+
+secrets:
+  name: user-frontend-secrets
+  remoteKey: s12ike.wft/E-COMMERCE/user-frontend
+
+
 ingress:
   enabled: true
   className: nginx
   host: frontend.example.com
 
 resources: {}
+
