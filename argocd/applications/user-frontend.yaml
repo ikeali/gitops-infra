@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: user-frontend
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ikeali/gitops-infra.git
+    targetRevision: main
+    path: helm/user-frontend
+    helm:
+      releaseName: user-frontend
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: s12ike
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
